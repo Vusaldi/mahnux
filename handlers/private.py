@@ -22,7 +22,7 @@ async def start(_, message: Message):
                         "🔊 Asistan", url="https://t.me/MorfinMusicAsistant"
                     ),
                     InlineKeyboardButton(
-                        "Kanal", url="https://t.me/UlviiBlogs"
+                        "Qrup", url="https://t.me/MorphinChat"
                     )
                 ],
                 [
@@ -30,7 +30,7 @@ async def start(_, message: Message):
                         "🧩 Əmrlər" , callback_data= "cbbilgi"
                     ),
                     InlineKeyboardButton(
-                        "Rəsmi Kanal 🇦🇿", url=f"https://t.me/UlviiBlogs"
+                        "Rəsmi Kanal ", url=f"https://t.me/UlviiBlogs"
                     )
                 ]
                 
@@ -139,7 +139,7 @@ async def cbstart(_, query: CallbackQuery):
                         "🔊 Asistan", url="https://t.me/MorfinMusicAsistant"
                     ),
                     InlineKeyboardButton(
-                        "Kanal", url="https://t.me/UlviiBlogs"
+                        "Qrup", url="https://t.me/MorphinChat"
                     )
                 ],
                 [
@@ -147,7 +147,7 @@ async def cbstart(_, query: CallbackQuery):
                         "🧩 Əmrlər" , callback_data= "cbbilgi"
                     ),
                     InlineKeyboardButton(
-                        "Rəsmi Kanal 🇦🇿", url=f"https://t.me/UlviiBlogs"
+                        "Rəsmi Kanal ", url=f"https://t.me/UlviiBlogs"
                     )
                 ]
                 
