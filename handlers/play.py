@@ -109,7 +109,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "DragonMusicAsistant"
+        user.first_name = "MasalMuzikAsistant"
     usar = user
     wew = usar.id
     try:
@@ -199,7 +199,7 @@ async def play(_, message: Message):
         [
             [
                 InlineKeyboardButton("Qrup", url=f"https://t.me/gonuldunyasi"),
-                InlineKeyboardButton("📣 Kanal", url=f"https://t.me/umudumuzukirdilar"),
+                InlineKeyboardButton(" Kanal", url=f"https://t.me/umudumuzukirdilar"),
             ],[
                 InlineKeyboardButton("📲 Bağla", callback_data="cls"),
             ],
