@@ -22,7 +22,7 @@ async def start(_, message: Message):
                         "🔊 Asistan", url="https://t.me/MorfinMusicAsistant"
                     ),
                     InlineKeyboardButton(
-                        "Kanal", url="https://t.me/UlviSupport"
+                        "Kanal", url="https://t.me/Ulvi"
                     )
                 ],
                 [
@@ -126,7 +126,7 @@ async def admin(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""**Salam {query.from_user.mention} 🎵\nMən {bot}!\nSəsli sohbətlərdə musiqi oxuyan botam. Ban yetkisiz, Səs yönətim yetki verib, Asistanı qrupa əlavə edin.\n\nSahibim👉  [Ulvi](https://t.me/BrendUlvi)**""",
+    await query.edit_message_text(f"""**Salam {query.from_user.mention} 🎵\nMən {bot}!\nSəsli sohbətlərdə musiqi oxuyan botam. Ban yetkisiz, Səs yönətim yetki verib, Asistanı qrupa əlavə edin.\n\nSahibim👉  [Ulvi](https://t.me/BrendUIvi)**""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -136,7 +136,7 @@ async def cbstart(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🔊 Asistan", url="https://t.me/MorfinMusicAsistantMusicAsistant"
+                        "🔊 Asistan", url="https://t.me/MorfinMusicAsistant"
                     ),
                     InlineKeyboardButton(
                         "Kanal", url="https://t.me/UlviiBlogs"
