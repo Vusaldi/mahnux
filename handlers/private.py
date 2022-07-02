@@ -22,7 +22,7 @@ async def start(_, message: Message):
                         "🔊 Asistan", url="https://t.me/MorfinMusicAsistant"
                     ),
                     InlineKeyboardButton(
-                        "Kanal", url="https://t.me/Ulvi"
+                        "Kanal", url="https://t.me/UlviiBlogs"
                     )
                 ],
                 [
@@ -30,7 +30,7 @@ async def start(_, message: Message):
                         "🧩 Əmrlər" , callback_data= "cbbilgi"
                     ),
                     InlineKeyboardButton(
-                        "Rəsmi Kanal 🇦🇿", url=f"https://t.me/MorphinChat"
+                        "Rəsmi Kanal 🇦🇿", url=f"https://t.me/UlviiBlogs"
                     )
                 ]
                 
