@@ -8,21 +8,21 @@ from helpers.filters import command, other_filters2
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start(_, message: Message):
                 await message.reply_photo(
-                "https://te.legra.ph/file/cfdd43dfe1c26188adc2e.jpg",
-                caption=(f"""**Salam {message.from_user.mention} 🎵\nMən {bot}!\nSəsli söhbətlərdə musiqi oxuyan botam. Ban yetkisiz, Səs yetkisi verib, Asistanı qrupa əlavə edin.\n\nSahibim👉  [Ulvi](https://t.me/BrendUlvi)**"""),
+                "https://te.legra.ph/file/7c24db2c84218935a8ac4.jpg",
+                caption=(f"""**Salam {message.from_user.mention} 🎵\nMən {bot}!\nSəsli söhbətlərdə musiqi oxuyan botam. Ban yetkisiz, Səs yetkisi verib, Asistanı qrupa əlavə edin.\n\nSahibim👉  [Ulvi](https://t.me/BrendUIvi)**"""),
          reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ ❰ Məni Qrupa Əlavə Et ❱ ➕", url=f"https://t.me/Dragoon_Music_Bot?startgroup=true"
+                        "➕ ❰ Məni Qrupa Əlavə Et ❱ ➕", url=f"https://t.me/Morfin_Music_Bot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🔊 Asistan", url="https://t.me/DragonMusicAsistant"
+                        "🔊 Asistan", url="https://t.me/MorfinMusicAsistant"
                     ),
                     InlineKeyboardButton(
-                        "Support 💬", url="https://t.me/UlviSupport"
+                        "Kanal", url="https://t.me/UlviSupport"
                     )
                 ],
                 [
@@ -30,7 +30,7 @@ async def start(_, message: Message):
                         "🧩 Əmrlər" , callback_data= "cbbilgi"
                     ),
                     InlineKeyboardButton(
-                        "Rəsmi Kanal 🇦🇿", url=f"https://t.me/Ulvi_Support"
+                        "Rəsmi Kanal 🇦🇿", url=f"https://t.me/MorphinChat"
                     )
                 ]
                 
@@ -56,7 +56,7 @@ async def bilgi(_, message: Message):
                          "Geri 🔄", callback_data="cbstart")
                  ],[
                      InlineKeyboardButton(
-                         "Sahib 🇦🇿", url="https://t.me/BrendUlvi")
+                         "Sahib 🇦🇿", url="https://t.me/BrendUIvi")
                  ]
              ]
          )
@@ -82,7 +82,7 @@ async def cbbilgi(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "Sahib 🇦🇿", url="https://t.me/BrendUlvi")
+            "Sahib 🇦🇿", url="https://t.me/BrendUIvi")
         ]
       ]
      ))
@@ -95,7 +95,7 @@ async def herkes(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "Sahib 🇦🇿", url="https://t.me/BrendUlvi")
+                         "Sahib 🇦🇿", url="https://t.me/BrendUIvi")
                  ],
                  [
                      InlineKeyboardButton(
@@ -113,7 +113,7 @@ async def admin(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "Sahib 🇦🇿", url="https://t.me/BrendUlvi")
+                         "Sahib 🇦🇿", url="https://t.me/BrendUIvi")
                  ],
                  [
                      InlineKeyboardButton(
@@ -131,15 +131,15 @@ async def cbstart(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ ❰ Məni Qrupa Əlavə Et ❱ ➕", url=f"https://t.me/Dragoon_Music_Bot?startgroup=true"
+                        "➕ ❰ Məni Qrupa Əlavə Et ❱ ➕", url=f"https://t.me/Morfin_Music_Bot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🔊 Asistan", url="https://t.me/DragonMusicAsistant"
+                        "🔊 Asistan", url="https://t.me/MorfinMusicAsistantMusicAsistant"
                     ),
                     InlineKeyboardButton(
-                        "Support 💬", url="https://t.me/UlviSupport"
+                        "Kanal", url="https://t.me/UlviiBlogs"
                     )
                 ],
                 [
@@ -147,7 +147,7 @@ async def cbstart(_, query: CallbackQuery):
                         "🧩 Əmrlər" , callback_data= "cbbilgi"
                     ),
                     InlineKeyboardButton(
-                        "Rəsmi Kanal 🇦🇿", url=f"https://t.me/UlviSupport"
+                        "Rəsmi Kanal 🇦🇿", url=f"https://t.me/UlviiBlogs"
                     )
                 ]
                 
