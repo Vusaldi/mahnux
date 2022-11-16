@@ -9,7 +9,7 @@ from helpers.filters import command, other_filters2
 async def start(_, message: Message):
                 await message.reply_photo(
                 "https://images.app.goo.gl/in11Pj1tHNhVo4DY9",
-                caption=(f"""**Salam {message.from_user.mention} 🎵\nMən {bot}!\nSəsli söhbətlərdə musiqi oxuyan botam. Ban yetkisiz, Səs yetkisi verib, Asistanı qrupa əlavə edin.\n\nSahibim👉  [Ulvi](https://t.me/BrendUIvi)**"""),
+                caption=(f"""**Salam {message.from_user.mention} 🎧\nMən {bot}!\nSəsli Söhbətlərdə Musiqi Oxuyan Botam. Ban Yetgisi Olmadan, Səs Yetkisi Verib, Asistanı Qrupa Əlavə Edin.\n\nSahibim 👉  [KPLGƏ](https://t.me/sesizKOLGE)**"""),
          reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -42,7 +42,7 @@ async def start(_, message: Message):
 
 @Client.on_message(command(["help", f"help@{BOT_USERNAME}"]))
 async def bilgi(_, message: Message):
-      await message.reply_text("    ❗ Qeyd:\n Botun Aktiv İşləməsi Üçün Bu Üç Yetkiyə 3hdiyacı Var:\n- Mesaj Silmə Yetkisi,\n- Bağlantı İlə Dəvət Etmə Yetkisi,\n- Səsli SÖhbəti Yönətmə Uetkisi.", 
+      await message.reply_text("    ❗ Qeyd:\n Botun Aktiv İşləməsi Üçün Bu Üç Yetkiyə Ehdiyacı Var:\n- Mesaj Silmə Yetkisi,\n- Bağlantı İlə Dəvət Etmə Yetkisi,\n- Səsli SÖhbəti Yönətmə Uetkisi.", 
       reply_markup=InlineKeyboardMarkup(
              [
                  [
@@ -65,7 +65,7 @@ async def bilgi(_, message: Message):
 
 @Client.on_callback_query(filters.regex("cbbilgi"))
 async def cbbilgi(_, query: CallbackQuery):
-    await query.edit_message_text(" ❗ Qeyd:\nBotun aktiv işləməsi üçün bu üç yetki vermək lazımdır ⬇️\n- Mesaj silmə yetkisi.\n- Bağlantı ilə dəvət etmə yetkisi.\n- Səsli söhbəti yönətmə yetkisi.", 
+    await query.edit_message_text("    ❗ Qeyd:\nBotun Aktiv İşləməsi Üçün Bu Üç Yetkiyə Ehdiyacı Var\n- Mesaj Silmə Yetkisi.\n- Bağlantı İlə Dəvət Etmə Yetkisi.\n- Səsli Söhbəti Yönətmə Yetkisi.", 
     reply_markup=InlineKeyboardMarkup(
       [
         [
@@ -90,12 +90,12 @@ async def cbbilgi(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("herkes"))
 async def herkes(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun hərkəs üçün əmr menyusu 😉\n\n ▶️ /play - Musiqi oxutmaq üçün youtube url'sinə vəya musiqi dosyasına yanıt verin\n ▶️ /play <song name> - İstədiyiniz musiqi oxut\n 🔴 \n 🎵 /song <song name> - İstədiyiniz musiqi sürətli bir şəkildə axtarın\n 🎵 /vbul - İstədiyiniz videoları sürətli bir şəkildə axtarın\n 🔍 /video <query> - Youtube'da olan videoları axtarın\n\n</b>""",
+    await query.edit_message_text(f"""<b>👋 Salam {query.from_user.mention}!\n🕵️‍♂️ 💂‍♂️ Bu Botun Hərkəs Üçün Əmr Menyusudu\n\n ▶️ /play - Musiqi Adı Sənıtci Adı\n ▶️ /play - Musiqi YouTube Lingi\n 🎧 /song - Sürətli Şəkildə Musiqi Yükləyin\n🎬 /vsong - Sürətli Şəkildə Vidyo Yükləyin\n 🔍 /search - Oxşar Musiqi Və Vidyoları Axtar\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
                      InlineKeyboardButton(
-                         "Sahib 🇦🇿", url="https://t.me/sesizKOLGE")
+                         "🇦🇿 OWNER 👨‍💻", url="https://t.me/sesizKOLGE")
                  ],
                  [
                      InlineKeyboardButton(
@@ -108,7 +108,7 @@ async def herkes(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("admin"))
 async def admin(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun adminlər üçün əmr menyusu 🤩\n\n ▶️ /resume - Musiqi oxutmağa davam et\n ⏸️ /durdur - Oxuyan musiqini dayandır\n 🔄 /atla - Sıraya alınmış musiqiyə keç\n ⏹ /skip - Musiqi oxumanı dayandır\n 🔼 /promote - Botun sadəcə yönətici üçün olan əmrlərini istifadə üçün istifadəçiyə yetki ver\n 🔽 /demote - Botun yönətici əmrlərini istifadə edən istifadəçinin yetkisini al\n\n ⚪ /asistan - Musiqi asistanı qrupunuza qoşulur.\n\n</b>""",
+    await query.edit_message_text(f"""<b>👋 Salam {query.from_user.mention}!\n🕵️‍♂️ Bu Botun Adminlər Üçün Əmr menyusudu\n\n ⏸ /resume - Musiqi Oxutmağa Davam Et\n ⏸▶️ /pause - Musiqini Dayandır\n ⏩ /skip - Sıraya alınmış musiqiyə keç\n ⏹ /skip - Musiqi oxumanı dayandır\n 🔼 /promote - Botun sadəcə yönətici üçün olan əmrlərini istifadə üçün istifadəçiyə yetki ver\n 🔽 /demote - Botun yönətici əmrlərini istifadə edən istifadəçinin yetkisini al\n\n ⚪ /asistan - Musiqi asistanı qrupunuza qoşulur.\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
