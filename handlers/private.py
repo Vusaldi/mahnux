@@ -136,18 +136,18 @@ async def cbstart(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🔊 Asistan", url="https://t.me/KolgeMp3Asistan"
+                        "🔊 ASİSTAN", url="https://t.me/KolgeMp3Asistan"
                     ),
                     InlineKeyboardButton(
-                        "Qrup", url="https://t.me/MorphinChat"
+                        "⚡ DİGƏR BOTLARIM", url="https://t.me/MorphinChat"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🧩 Əmrlər" , callback_data= "cbbilgi"
+                        "📚 ƏMİRLƏR" , callback_data= "cbbilgi"
                     ),
                     InlineKeyboardButton(
-                        "Rəsmi Kanal ", url=f"https://t.me/UlviiBlogs"
+                        "🇦🇿 OWNER 👨‍💻", url=f"https://t.me/sesizKOLGE"
                     )
                 ]
                 
