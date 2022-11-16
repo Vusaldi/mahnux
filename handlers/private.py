@@ -14,23 +14,23 @@ async def start(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ ❰ Məni Qrupa Əlavə Et ❱ ➕", url=f"https://t.me/Morfin_Music_Bot?startgroup=true"
+                        "➕  Məni Qrupa Əlavə Et ➕", url=f"https://t.me/kolgempbot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🔊 Asistan", url="https://t.me/MorfinMusicAsistant"
+                        "🔊 ASİSTAN", url="https://t.me/KolgeMp3Asistan"
                     ),
                     InlineKeyboardButton(
-                        "Qrup", url="https://t.me/MorphinChat"
+                        "⚡ DİGƏR BOTLARIM", url="https://t.me/menimbotlarim"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🧩 Əmrlər" , callback_data= "cbbilgi"
+                        "📚 ƏMİRLƏR" , callback_data= "cbbilgi"
                     ),
                     InlineKeyboardButton(
-                        "Rəsmi Kanal ", url=f"https://t.me/UlviiBlogs"
+                        "🇦🇿 OWNER 👨‍💻 ", url=f"https://t.me/sesizKOLGE"
                     )
                 ]
                 
@@ -40,7 +40,7 @@ async def start(_, message: Message):
   
 
 
-@Client.on_message(command(["bilgi", f"bilgi@{BOT_USERNAME}"]))
+@Client.on_message(command(["help", f"help@{BOT_USERNAME}"]))
 async def bilgi(_, message: Message):
       await message.reply_text(" ❗ Qeyd:\n Botun aktiv işləməsi üçün bu üç yetki vermək lazımdır ⬇️:\n- Mesaj silmə yetkisi,\n- Bağlantı ilə dəvət etmə yetkisi,\n- Səsli səhbəti yönətmə yetkisi.", 
       reply_markup=InlineKeyboardMarkup(
@@ -56,7 +56,7 @@ async def bilgi(_, message: Message):
                          "Geri 🔄", callback_data="cbstart")
                  ],[
                      InlineKeyboardButton(
-                         "Sahib 🇦🇿", url="https://t.me/BrendUIvi")
+                         "Sahib 🇦🇿", url="https://t.me/sesizKOLGE")
                  ]
              ]
          )
@@ -82,7 +82,7 @@ async def cbbilgi(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "Sahib 🇦🇿", url="https://t.me/BrendUIvi")
+            "Sahib 🇦🇿", url="https://t.me/sesizKOLGE")
         ]
       ]
      ))
@@ -95,7 +95,7 @@ async def herkes(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "Sahib 🇦🇿", url="https://t.me/BrendUIvi")
+                         "Sahib 🇦🇿", url="https://t.me/sesizKOLGE")
                  ],
                  [
                      InlineKeyboardButton(
@@ -113,7 +113,7 @@ async def admin(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "Sahib 🇦🇿", url="https://t.me/BrendUIvi")
+                         "Sahib 🇦🇿", url="https://t.me/sesizKOLGE")
                  ],
                  [
                      InlineKeyboardButton(
@@ -131,12 +131,12 @@ async def cbstart(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ ❰ Məni Qrupa Əlavə Et ❱ ➕", url=f"https://t.me/Morfin_Music_Bot?startgroup=true"
+                        "➕ ❰ Məni Qrupa Əlavə Et ❱ ➕", url=f"https://t.me/Kolgempbot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🔊 Asistan", url="https://t.me/MorfinMusicAsistant"
+                        "🔊 Asistan", url="https://t.me/KolgeMp3Asistan"
                     ),
                     InlineKeyboardButton(
                         "Qrup", url="https://t.me/MorphinChat"
