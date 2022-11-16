@@ -8,7 +8,7 @@ from helpers.filters import command, other_filters2
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start(_, message: Message):
                 await message.reply_photo(
-                "https://te.legra.ph/file/7c24db2c84218935a8ac4.jpg",
+                "https://images.app.goo.gl/in11Pj1tHNhVo4DY9",
                 caption=(f"""**Salam {message.from_user.mention} 🎵\nMən {bot}!\nSəsli söhbətlərdə musiqi oxuyan botam. Ban yetkisiz, Səs yetkisi verib, Asistanı qrupa əlavə edin.\n\nSahibim👉  [Ulvi](https://t.me/BrendUIvi)**"""),
          reply_markup=InlineKeyboardMarkup(
             [
@@ -42,21 +42,21 @@ async def start(_, message: Message):
 
 @Client.on_message(command(["help", f"help@{BOT_USERNAME}"]))
 async def bilgi(_, message: Message):
-      await message.reply_text(" ❗ Qeyd:\n Botun aktiv işləməsi üçün bu üç yetki vermək lazımdır ⬇️:\n- Mesaj silmə yetkisi,\n- Bağlantı ilə dəvət etmə yetkisi,\n- Səsli səhbəti yönətmə yetkisi.", 
+      await message.reply_text("    ❗ Qeyd:\n Botun Aktiv İşləməsi Üçün Bu Üç Yetkiyə 3hdiyacı Var:\n- Mesaj Silmə Yetkisi,\n- Bağlantı İlə Dəvət Etmə Yetkisi,\n- Səsli SÖhbəti Yönətmə Uetkisi.", 
       reply_markup=InlineKeyboardMarkup(
              [
                  [
                      InlineKeyboardButton(
-                         "🔴 İstifatəçi Əmrləri", callback_data="herkes")
+                         "💂‍♂️ İstifatəçi Əmrləri", callback_data="herkes")
                  ],[                     
                      InlineKeyboardButton(
-                         "⚫ Admin  Əmrləri", callback_data="admin")
+                         "🕵️‍♂️ Admin  Əmrləri", callback_data="admin")
                  ],[
                      InlineKeyboardButton(
                          "Geri 🔄", callback_data="cbstart")
                  ],[
                      InlineKeyboardButton(
-                         "Sahib 🇦🇿", url="https://t.me/sesizKOLGE")
+                         "🇦🇿 OWNER 👨‍💻", url="https://t.me/sesizKOLGE")
                  ]
              ]
          )
@@ -70,11 +70,11 @@ async def cbbilgi(_, query: CallbackQuery):
       [
         [
           InlineKeyboardButton(
-            "✨ Hərkəs üçün əmrlər", callback_data ="herkes")
+            "💂‍♂️👮‍♂️ Hərkəs üçün əmrlər", callback_data ="herkes")
         ],
         [
           InlineKeyboardButton(
-            "👑 Admin əmrləri",callback_data ="admin")
+            "👮‍♂️ Admin əmrləri",callback_data ="admin")
         ],
         [
           InlineKeyboardButton(
@@ -82,7 +82,7 @@ async def cbbilgi(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "Sahib 🇦🇿", url="https://t.me/sesizKOLGE")
+            "🇦🇿 OWNER 👨‍💻", url="https://t.me/sesizKOLGE")
         ]
       ]
      ))
