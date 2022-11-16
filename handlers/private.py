@@ -9,7 +9,7 @@ from helpers.filters import command, other_filters2
 async def start(_, message: Message):
                 await message.reply_photo(
                 "https://images.app.goo.gl/in11Pj1tHNhVo4DY9",
-                caption=(f"""**Salam {message.from_user.mention} 🎧\nMən {bot}!\nSəsli Söhbətlərdə Musiqi Oxuyan Botam. Ban Yetgisi Olmadan, Səs Yetkisi Verib, Asistanı Qrupa Əlavə Edin.\n\nSahibim 👉  [KPLGƏ](https://t.me/sesizKOLGE)**"""),
+                caption=(f"""**Salam {message.from_user.mention} 🎧\nMən {bot}!\nSəsli Söhbətlərdə Musiqi Oxuyan Botam. Ban Yetgisi Olmadan, Səs Yetkisi Verib, Asistanı Qrupa Əlavə Edin.\n\nSahibim 👉  [KÖLGƏ](https://t.me/sesizKOLGE)**"""),
          reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -108,7 +108,7 @@ async def herkes(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("admin"))
 async def admin(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>👋 Salam {query.from_user.mention}!\n🕵️‍♂️ Bu Botun Adminlər Üçün Əmr menyusudu\n\n ⏸ /resume - Musiqi Oxutmağa Davam Et\n ⏸▶️ /pause - Musiqini Dayandır\n ⏩ /skip - Sıraya alınmış musiqiyə keç\n ⏹ /skip - Növbəyə Alınmış Musiqiyə Keçər\n 🔼 /yetkiver - Userə Səsli Söhbətdə İdarəÇilik Yetkisi Verər \n 🔽 /yetkial - Userin Səsli Söhbət İdarəçi Yeykisin Alar\n\n ⚪ /asistan - Musiqi Asistanı Qrupunuza Qoşar\♻️ /reload - Botu Yenidən Başladar\n\n</b>""",
+    await query.edit_message_text(f"""<b>👋 Salam {query.from_user.mention}!\n🕵️‍♂️ Bu Botun Adminlər Üçün Əmr menyusudu\n\n⏸ /resume - Musiqi Oxutmağa Davam Et\n▶️ /pause - Musiqini Dayandır\n ⏩ /skip - Sıraya alınmış musiqiyə keç\n⏹ /skip - Növbəyə Alınmış Musiqiyə Keçər\n🔼 /yetkiver - Userə Səsli Söhbətdə İdarəÇilik Yetkisi Verər \n🔽 /yetkial - Userin Səsli Söhbət İdarəçi Yeykisin Alar\n\n⚪ /asistan - Musiqi Asistanı Qrupunuza Qoşar\n♻️ /reload - Botu Yenidən Başladar\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
