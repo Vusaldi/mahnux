@@ -108,7 +108,7 @@ async def herkes(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("admin"))
 async def admin(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>👋 Salam {query.from_user.mention}!\n🕵️‍♂️ Bu Botun Adminlər Üçün Əmr menyusudu\n\n ⏸ /resume - Musiqi Oxutmağa Davam Et\n ⏸▶️ /pause - Musiqini Dayandır\n ⏩ /skip - Sıraya alınmış musiqiyə keç\n ⏹ /skip - Musiqi oxumanı dayandır\n 🔼 /promote - Botun sadəcə yönətici üçün olan əmrlərini istifadə üçün istifadəçiyə yetki ver\n 🔽 /demote - Botun yönətici əmrlərini istifadə edən istifadəçinin yetkisini al\n\n ⚪ /asistan - Musiqi asistanı qrupunuza qoşulur.\n\n</b>""",
+    await query.edit_message_text(f"""<b>👋 Salam {query.from_user.mention}!\n🕵️‍♂️ Bu Botun Adminlər Üçün Əmr menyusudu\n\n ⏸ /resume - Musiqi Oxutmağa Davam Et\n ⏸▶️ /pause - Musiqini Dayandır\n ⏩ /skip - Sıraya alınmış musiqiyə keç\n ⏹ /skip - Növbəyə Alınmış Musiqiyə Keçər\n 🔼 /yetkiver - Userə Səsli Söhbətdə İdarəÇilik Yetkisi Verər \n 🔽 /yetkial - Userin Səsli Söhbət İdarəçi Yeykisin Alar\n\n ⚪ /asistan - Musiqi Asistanı Qrupunuza Qoşar\♻️ /reload - Botu Yenidən Başladar\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
