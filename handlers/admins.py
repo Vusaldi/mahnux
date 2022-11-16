@@ -16,29 +16,29 @@ from pytgcalls.types.input_stream import InputStream
 
 ACTV_CALLS = []
 
-@Client.on_message(command(["Dayandırıldı", "pause"]) & other_filters)
+@Client.on_message(command(["pause", "dayan"]) & other_filters)
 @errors
 @authorized_users_only
 async def durdur(_, message: Message):
     await callsmusic.pytgcalls.pause_stream(message.chat.id)
-    a = await message.reply_text("▶️ **Musiqi Dayandırıldı!**\n\n• Musiqi İşlətməyə davam etmək üçün **komut » davam**")
+    a = await message.reply_text("🎧 **▶️ Səsli Söhbətdə Musiqi Dayandırıldı!**")
     await sleep(3)
     await a.delete()
     
 
 
-@Client.on_message(command(["davam", "resume"]) & other_filters)
+@Client.on_message(command(["resume", "davam"]) & other_filters)
 @errors
 @authorized_users_only
 async def devam(_, message: Message):
     await callsmusic.pytgcalls.resume_stream(message.chat.id)
-    a = await message.reply_text("⏸ **Musiqi davam edilir*\n\n• Musiqini dayandırmaq üçün **komut » Dayandır**")
+    a = await message.reply_text("🎧 **⏸ Səsli Söhbətdə Musiqi Davam Edilir**")
     await sleep(3)
     await a.delete()
     
 
 
-@Client.on_message(command(["son", "end"]) & other_filters)
+@Client.on_message(command(["end", "son"]) & other_filters)
 @errors
 @authorized_users_only
 async def stop(_, message: Message):
@@ -46,7 +46,7 @@ async def stop(_, message: Message):
     for x in callsmusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
-        await message.reply_text("🙄 **Hal-hazırda musiqi oxunmur**")
+        await message.reply_text("🎧 **🆘️ Hal-hazırda Səsli Söhbətdə Musiqi Səslənmir**\n🎧 **/play Əmri Vasdəsi İlə Musiqi Dinləyə Bilırsiz")
     else:
         try:
             queues.clear(chat_id)
@@ -55,9 +55,9 @@ async def stop(_, message: Message):
         await callsmusic.pytgcalls.leave_group_call(chat_id)
         await _.send_message(
             message.chat.id,
-            "✅ **Musiqi dayandırıldı\n\n• Asistan səsli söhbət bağlantısı kəsildi !**")
+            "🎧 **🛰 Səsli Söhbətdə Musiqi Dayandırıldı\n\n🔊 Asistan Səsli Söhbətdən Ayrıldı !**")
     
-@Client.on_message(command(["atla", "skip"]) & other_filters)
+@Client.on_message(command(["skip", "kec"]) & other_filters)
 @errors
 @authorized_users_only
 async def atla(_, message: Message):
@@ -66,7 +66,7 @@ async def atla(_, message: Message):
     for x in callsmusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
-        a = await message.reply_text("Mahnı keçmək üçün heçnə yoxdu!")
+        a = await message.reply_text("🎧 **✖ Sirada H3ç Bir Musiqi Yoxdur")
         await sleep(3)
         await a.delete()
     else:
@@ -84,57 +84,57 @@ async def atla(_, message: Message):
                 ),
             )
             
-        a = await message.reply_text("➡️ **Mahnı 💫 yan keçdi.**")
+        a = await message.reply_text("🎧 **⏩ Növbəti Musiqiyə Keçirildi**")
         await sleep(3)
         await a.delete()
 
 # Yetki Vermek için (ver) Yetki almak için (al) komutlarını ekledim.
 # Gayet güzel çalışıyor. @Mahoaga Tarafından Eklenmiştir. 
-@Client.on_message(command("ver") & other_filters)
+@Client.on_message(command("yetkiver") & other_filters)
 @authorized_users_only
 async def authenticate(client, message):
     global admins
     if not message.reply_to_message:
-        await message.reply("İstifadəçiyə yetki vermək üçün yanıtlayın!")
+        await message.reply("ℹ Userə Yetki Vermək Üçün Mesajın Yanıtlayın!")
         return
     if message.reply_to_message.from_user.id not in admins[message.chat.id]:
         new_admins = admins[message.chat.id]
         new_admins.append(message.reply_to_message.from_user.id)
         admins[message.chat.id] = new_admins
-        await message.reply("İstifadəçi yetkili.")
+        await message.reply("✔ Uaerə Səsli Söhbəti Yönətmə İdarəçiliyi Verildi.\n⚡ Artıq Səsli Söhbəti İdarə Edə Bilər!")
     else:
         await message.reply("✔ İstifadəçi onsuzda yetkilidir!")
 
 
-@Client.on_message(command("al") & other_filters)
+@Client.on_message(command("yetkial") & other_filters)
 @authorized_users_only
 async def deautenticate(client, message):
     global admins
     if not message.reply_to_message:
-        await message.reply("✅ Yetkisini almaq üçün mesaj göndərin!")
+        await message.reply("✅ Yetkisini Almaq Üçün Mesaj Göndərin!")
         return
     if message.reply_to_message.from_user.id in admins[message.chat.id]:
         new_admins = admins[message.chat.id]
         new_admins.remove(message.reply_to_message.from_user.id)
         admins[message.chat.id] = new_admins
-        await message.reply("İstifadəçi yetkisiz")
+        await message.reply("🆘️  Userin Onsuzda Yetgisi Yoxdu")
     else:
-        await message.reply("✅ yetkisi alındı!")
+        await message.reply("✔ Userin yetkisi alındı!\n✖ Səsli Söhbəti Daha İdarə Edə Bilməz")
 
 
 # Sesli sohbet için 0-200 arası yeni komut eklenmiş oldu. 
-@Client.on_message(command(["ses"]) & other_filters)
+@Client.on_message(command(["vol", "ses"]) & other_filters)
 @authorized_users_only
 async def change_ses(client, message):
     range = message.command[1]
     chat_id = message.chat.id
     try:
        callsmusic.pytgcalls.change_volume_call(chat_id, volume=int(range))
-       await message.reply(f"✅ **Birim olaraq ayarlandı:** ```{range}%```")
+       await message.reply(f"🔊 **Səs Ayarı** ```{range}%```**Olaraq Ayarlandı**")
     except Exception as e:
        await message.reply(f"**xəta:** {e}")
 
-@Client.on_message(command("reload") & other_filters)
+@Client.on_message(command(["reload", "yenile"]) & other_filters)
 @errors
 @authorized_users_only
 async def update_admin(client, message):
@@ -146,5 +146,5 @@ async def update_admin(client, message):
     admins[message.chat.id] = new_admins
     await client.send_message(
         message.chat.id,
-        "✅ **Bot yenidən başladı!**\n✅ **Admin siyahısı yeniləndi!**"
+        "✅ **Bot Yenidən Başladı!**\n✅ **Admin Siyahısı Yeniləndi!**"
     )
