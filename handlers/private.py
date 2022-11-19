@@ -9,7 +9,7 @@ from helpers.filters import command, other_filters2
 async def start(_, message: Message):
                 await message.reply_photo(
                 "https://images.app.goo.gl/in11Pj1tHNhVo4DY9",
-                caption=(f"""**Salam {message.from_user.mention} 🎧\nMən {bot}!\nSəsli Söhbətlərdə Musiqi Oxuyan Botam. Ban Yetgisi Olmadan, Səs Yetkisi Verib, Asistanı Qrupa Əlavə Edin.\n\nSahibim 👉  [KÖLGƏ](https://t.me/sesizKOLGE)**"""),
+                caption=(f"""**Salam {message.from_user.mention}\n\nMən {bot}!\nSəsli Söhbətlərdə Musiqi Oxuyan Botam. Ban Yetgisi Olmadan, Səs Yetkisi Verib, Asistanı Qrupa Əlavə Edin.\n\nSahibim 👉  [KÖLGƏ](https://t.me/sesizKOLGE)**"""),
          reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -112,7 +112,7 @@ async def herkes(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("qarşıq"))
 async def qarışıq(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>👋 Salam {query.from_user.mention}!\n⚡ Bu Button Oxşar Əmrlər Meynusudu\n\n⚡ /play - /oxu\n⚡ /song - /musiqi\n⚡  /vsong - /vidyo\n⚡ /search - /axtar\n⚡ /pause - /dayan\n⚡ /resume - /davam\n⚡ /skip - /kec\n⚡ /vol - /ses\n⚡ /reload - /yenile\n⚡ /asistan - /qosul\n⚡ /asistanbb - /ayrıl\n\n✅ Gösdərilən Hər İki Əmrlərdə Bot Üçün Geçərlidir</b>""",
+    await query.edit_message_text(f"""<b>👋 Salam {query.from_user.mention}!\n⚡ Bu Button Oxşar Əmrlər Meynusudu\n\n⚡ /play - /oxu\n⚡ /song - /musiqi\n⚡ /vsong - /vidyo\n⚡ /search - /axtar\n⚡ /pause - /dayan\n⚡ /resume - /davam\n⚡ /skip - /kec\n⚡ /vol - /ses\n⚡ /reload - /yenile\n⚡ /asistan - /qosul\n⚡ /asistanbb - /ayrıl\n\n✅ Gösdərilən Hər İki Əmrlərdə Bot Üçün Geçərlidir</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
@@ -149,7 +149,7 @@ async def admin(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""**Salam {query.from_user.mention} 🎵\nMən {bot}!\nSəsli sohbətlərdə musiqi oxuyan botam. Ban yetkisiz, Səs yönətim yetki verib, Asistanı qrupa əlavə edin.\n\nSahibim 👉  [KÖLGƏ](https://t.me/sesizKOLGE)**""",
+    await query.edit_message_text(f"""**Salam {query.from_user.mention}\n\nMən {bot}!\nSəsli sohbətlərdə musiqi oxuyan botam. Ban yetkisiz, Səs yönətim yetki verib, Asistanı qrupa əlavə edin.\n\nSahibim 👉  [KÖLGƏ](https://t.me/sesizKOLGE)**""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -162,7 +162,7 @@ async def cbstart(_, query: CallbackQuery):
                         "🔊 ASİSTAN", url="https://t.me/KolgeMp3Asistan"
                     ),
                     InlineKeyboardButton(
-                        "⚡ DİGƏR BOTLARIM", url="https://t.me/MorphinChat"
+                        "⚡ DİGƏR BOTLARIM", url="https://t.me/menimbotlarim"
                     )
                 ],
                 [
