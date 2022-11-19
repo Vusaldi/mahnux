@@ -18,7 +18,7 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-@Client.on_message(command(["song"]))
+@Client.on_message(command(["song", "musiqi"]))
 def bul(client, message):
 
     user_id = message.from_user.id
@@ -80,7 +80,7 @@ def bul(client, message):
         print(e)
 
 @Client.on_message(
-    command(["axtar", "vsong"]) & ~filters.edited
+    command(["vidyo", "vsong"]) & ~filters.edited
 )
 async def vsong(client, message):
     ydl_opts = {
