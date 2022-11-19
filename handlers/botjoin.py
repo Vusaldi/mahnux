@@ -4,7 +4,7 @@ from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserAlreadyParticipant
 from helpers.decorators import errors, authorized_users_only
 
-@Client.on_message(filters.group & filters.command(["qoşul", "asistan"]))
+@Client.on_message(filters.group & filters.command(["qosul", "asistan"]))
 @authorized_users_only
 @errors
 async def addchannel(client, message):
