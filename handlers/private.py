@@ -78,6 +78,10 @@ async def cbbilgi(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
+            "♻️ Oxşar Əmrlər", callback_data ="qarşıq")
+        ],
+        [
+          InlineKeyboardButton(
             "🔄 Geri", callback_data="cbstart")
         ],
         [
@@ -106,6 +110,25 @@ async def herkes(_, query: CallbackQuery):
          )
 
 
+@Client.on_callback_query(filters.regex("qarışıq"))
+async def qarışıq(_, query: CallbackQuery):
+    await query.edit_message_text(f"""<b>salam \n\n<\b>""",
+    reply_markup=InlineKeyboardMarkup(
+             [
+                 [
+                     InlineKeyboardButton(
+                         "🇦🇿 OWNER 👨‍💻", url="https://t.me/sesizKOLGE")
+                 ],
+                 [
+                     InlineKeyboardButton(
+                         "🔄 Geri", callback_data="cbbilgi")
+                 ]
+             ]
+         )
+         )
+    
+    
+    
 @Client.on_callback_query(filters.regex("admin"))
 async def admin(_, query: CallbackQuery):
     await query.edit_message_text(f"""<b>👋 Salam {query.from_user.mention}!\n🕵️‍♂️ Bu Botun Adminlər Üçün Əmr menyusudu\n\n⏸ /resume - Musiqi Oxutmağa Davam Et\n▶️ /pause - Musiqini Dayandır\n ⏩ /skip - Sıraya alınmış musiqiyə keç\n⏹ /skip - Növbəyə Alınmış Musiqiyə Keçər\n🔼 /yetkiver - Userə Səsli Söhbətdə İdarəÇilik Yetkisi Verər \n🔽 /yetkial - Userin Səsli Söhbət İdarəçi Yeykisin Alar\n\n⚪ /asistan - Musiqi Asistanı Qrupunuza Qoşar\n♻️ /reload - Botu Yenidən Başladar\n\n</b>""",
@@ -113,7 +136,7 @@ async def admin(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "Sahib 🇦🇿", url="https://t.me/sesizKOLGE")
+                         " 🇦🇿 OWNER 👨‍💻", url="https://t.me/sesizKOLGE")
                  ],
                  [
                      InlineKeyboardButton(
@@ -126,7 +149,7 @@ async def admin(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""**Salam {query.from_user.mention} 🎵\nMən {bot}!\nSəsli sohbətlərdə musiqi oxuyan botam. Ban yetkisiz, Səs yönətim yetki verib, Asistanı qrupa əlavə edin.\n\nSahibim👉  [Ulvi](https://t.me/BrendUIvi)**""",
+    await query.edit_message_text(f"""**Salam {query.from_user.mention} 🎵\nMən {bot}!\nSəsli sohbətlərdə musiqi oxuyan botam. Ban yetkisiz, Səs yönətim yetki verib, Asistanı qrupa əlavə edin.\n\nSahibim 👉  [KÖLGƏ](https://t.me/sesizKOLGE)**""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
