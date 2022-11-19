@@ -112,7 +112,7 @@ async def herkes(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("qarışıq"))
 async def qarışıq(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>👋 Salam {query.from_user.mention}!\n⚡ Bu Button Oxşar Əmrlər Meynusudu\n\n⚡ /play - /oxu\n⚡/song - /musiqi\n ⚡  /vsong - /vidyo\n⚡ /search - /axtar\n⚡  \n\n<\b>""",
+    await query.edit_message_text(f"""<b>👋 Salam {query.from_user.mention}!\n⚡ Bu Button Oxşar Əmrlər Meynusudu\n\n⚡ /play - /oxu\n⚡/song - /musiqi\n ⚡  /vsong - /vidyo\n⚡ /search - /axtar\n⚡ /pause - /dayan\n⚡ /resume - /davam\n⚡ /skip - /kec\n⚡ /vol - /ses\n⚡ /reload - /yenile⚡ \n\n<\b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
