@@ -55,7 +55,7 @@ def bul(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"🎧 **BAŞLIQ**: [{title[:35]}]({link})\n🎬 **MƏNBƏ**: YouTube\n⏱️ **MÜDDƏT**: `{duration}`\n👁‍🗨 **BAXIŞ SAYI**: `{views}`\n📤 **BOT**: @{BOT_USERNAME}"
+        rep = f"🎧 **BAŞLIQ**: [{title[:35]}]({link})\n🎬 **MƏNBƏ**: YouTube\n⏱️ **MÜDDƏT**: `{duration}`\n👁‍🗨 **BAXIŞ SAYI**: `{views}`\n📤 Bot: @Kolgempbot"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(dur_arr[i]) * secmul
@@ -80,7 +80,7 @@ def bul(client, message):
         print(e)
 
 @Client.on_message(
-    command(["vaxtar", "vsong"]) & ~filters.edited
+    command(["axtar", "vsong"]) & ~filters.edited
 )
 async def vsong(client, message):
     ydl_opts = {
@@ -107,12 +107,12 @@ async def vsong(client, message):
     except Exception as e:
         print(e)
     try:
-        msg = await message.reply("📥 **🎬 `VİDYO YÜKLƏNİR...`**")
+        msg = await message.reply("📥 **🎬 `VİDYO AXTARILIR...`**")
         with YoutubeDL(ydl_opts) as ytdl:
             ytdl_data = ytdl.extract_info(link, download=True)
             file_name = ytdl.prepare_filename(ytdl_data)
     except Exception as e:
-        return await msg.edit(f"🚫 **XƏTA:** {e}")
+        return await msg.edit(f"🚫 __XƏTA:__ {e}")
     preview = wget.download(thumbnail)
     await msg.edit("📥 **🎬`VİDYO YÜKLƏNİR`...**")
     await message.reply_video(
